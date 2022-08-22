@@ -59,7 +59,7 @@
                     </div>
                     <div class="form-group row m-l-15">
                         <label class="col-form-label col-md-3">Nilai RAB</label>
-                        <div class="input-group col-md-3">
+                        <div class="input-group col-md-6">
                         <input type="text"value="{{$data->gross }}" class="form-control rupiah">
                         </div>
                     </div>
