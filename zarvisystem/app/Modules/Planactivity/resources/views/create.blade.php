@@ -1,0 +1,122 @@
+@extends('admin.layout') 
+@section('styles') 
+
+<link href="{{ asset("plugins/bootstrap-select/bootstrap-select.min.css")}}" rel="stylesheet" />
+<link href="{{ asset("plugins/bootstrap-tagsinput/bootstrap-tagsinput.css")}}" rel="stylesheet" />
+<link href="{{ asset("plugins/jquery-tag-it/css/jquery.tagit.css")}}" rel="stylesheet" />
+<link href="{{ asset("plugins/select2/dist/css/select2.min.css")}}" rel="stylesheet" />  
+ 
+
+<link href="{{ asset("plugins/bootstrap-calendar/css/bootstrap_calendar.css")}}" rel="stylesheet" />
+<link href="{{ asset("plugins/bootstrap-datepicker/css/bootstrap-datepicker3.css")}}" rel="stylesheet" /> 
+@stop 
+@section('content')
+ 
+
+<h1 class="page-header">Perencanaan Kegiatan Marketing<small></small></h1>
+  
+    <div class="row">
+        <!-- begin col-6 -->
+        <div class="col-lg-12">
+            <!-- begin panel -->
+            <div class="panel panel-inverse">
+                <!-- begin panel-heading -->
+                <div class="panel-heading">
+                    <h4 class="panel-title">Form Input</h4>
+                    
+                </div>
+                <!-- end panel-heading -->
+                <!-- begin panel-body -->
+                <div class="panel-body panel-form">
+                    <form class="form-horizontal" role="form" method="POST" action="{{ url('/planactivity') }}">
+
+                        <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                        @if ( count( $errors ) > 0 ) 
+                            <div class="alert alert-danger"> 
+                                <strong>Whoops!</strong> 
+                                There were some problems with your input.<br><br> 
+                                <ul> 
+                                    @foreach ($errors->all() as $error) 
+                                        <li>{{ $error }}</li> 
+                                    @endforeach 
+                                </ul> 
+                            </div> 
+                        @endif 
+		
+                        <div class="form-group row m-t-15 m-l-15">
+                            <label class="col-form-label col-md-2 ">Tanggal Mulai</label>
+                            <div class="col-md-4"> 
+                               <div class="input-group">
+											<input type="text" name="tanggal_start" id="tanggal" class="form-control" placeholder="Pilih Tanggal" required/>
+											<div class="input-group-addon">
+												<i class="fa fa-calendar"></i>
+											</div>
+										</div>                          
+                            </div>
+                        </div>    
+                            
+                        
+                        <div class="form-group row m-l-15">
+                            <label class="col-form-label col-md-2">Tanggal Berakhir</label>
+                            <div class="col-md-4"> 
+                               <div class="input-group">
+											<input type="text" name="tanggal_end" id="tanggal2" class="form-control" placeholder="Pilih Tanggal" required/>
+											<div class="input-group-addon">
+												<i class="fa fa-calendar"></i>
+											</div>
+										</div>                          
+                            </div>
+                        </div> 
+
+                        <div class="form-group row m-l-15">
+                            <label class="col-form-label col-md-2 ">Perencanaan Kegiatan </label>
+                            <div class="col-md-4">  
+                                <textarea name="plan"  class="form-control" rows="3"></textarea> 
+                                <strong style="color:red">{{ $errors->first('plan') }}</strong>
+                            </div>
+                        </div>  
+                          
+
+                        <div class="border-top my-3"></div>
+                        <div class="col-md-6 "> 
+                            <div class="text-right"> 
+                                <button type="submit" class="btn btn-primary"><i class="fa fa-paper-plane ml-2"></i> Save </button>
+    
+                                <a href="{{ URL::previous() }}" class="btn btn-warning"><i class="fa fa-redo-alt ml-2"></i> Cancel </a>
+    
+                            </div> 
+                        </div> 
+						
+                        <div class="my-3"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div> 
+
+@stop
+ 
+@section('scripts')
+ 
+<script src="{{ asset('plugins/bootstrap-datepicker/js/bootstrap-datepicker.js') }}"></script>
+<script src="{{ asset('plugins/bootstrap-daterangepicker/moment.js') }}"></script>
+ 
+<script>
+    $(document).ready(function() {   
+        $("#tanggal").datepicker(
+            {
+                todayHighlight: 1,
+                autoclose:1,
+                format: "yyyy-mm-dd",
+            }); 
+
+            $("#tanggal2").datepicker(
+            {
+                todayHighlight: 1,
+                autoclose:1,
+                format: "yyyy-mm-dd",
+            }); 
+         
+    });
+</script>
+@stop

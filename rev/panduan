@@ -1,0 +1,38 @@
+Ketuker brarti yah.
+Apakah final COA seperti ini?
+
+1. Aset
+1.1 Kas dan bank D
+1.1.1 Kas D
+1.1.2 Bank D
+1.2 Piutang usaha D
+1.3 Persediaan barang D
+1.4 Uang muka pembelian D
+1.5 Piutang karyawan D
+1.6 Pajak dibayar dimuka (PPN Masukan) D
+
+2. Hutang
+2.1 Hutang usaha K
+2.2 Uang muka penjualan K
+2.3 Tabungan karyawan K
+2.4 Hutang pajak (PPN Keluaran) K
+2.5 Hutang PPh pasal 29 K
+
+3. Modal
+3.1 Modal pemilik K
+3.2 Prive D
+3.3 Laba ditahan D
+
+4. Pendapatan
+4.1 Pendapatan penjualan K
+4.2 Potongan penjualan D
+4.3 Retur penjualan D
+4.4 Harga pokok penjualan D
+4.5 Pendapatan lain-lain K
+
+5. Biaya
+5.1 Biaya usaha D
+5.2 Biaya pengiriman D
+5.3 Biaya bongkar muat D
+5.4 Biaya lain-lain D
+5.5 Biaya PPh pasal 29 K 

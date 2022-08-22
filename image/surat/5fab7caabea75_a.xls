@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:x="urn:schemas-microsoft-com:office:excel"
+ xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:html="http://www.w3.org/TR/REC-html40">
+ <Worksheet ss:Name="Table1">
+  <Table>
+   <Column ss:Index="1" ss:AutoFitWidth="0" ss:Width="110"/>   <Column ss:Index="2" ss:AutoFitWidth="0" ss:Width="110"/>   <Column ss:Index="3" ss:AutoFitWidth="0" ss:Width="110"/>   <Row>
+    <Cell><Data ss:Type="String">TANGGAL</Data></Cell>
+    <Cell><Data ss:Type="String">KDTK</Data></Cell>
+    <Cell><Data ss:Type="String">NAMA</Data></Cell>
+    <Cell><Data ss:Type="String">QTY</Data></Cell>
+    <Cell><Data ss:Type="String">SALES</Data></Cell>
+    <Cell><Data ss:Type="String">PPN</Data></Cell>
+    <Cell><Data ss:Type="String">HPP</Data></Cell>
+    <Cell><Data ss:Type="String">BERSIH</Data></Cell>
+    <Cell><Data ss:Type="String">MARGIN</Data></Cell>
+    <Cell><Data ss:Type="String">PERSEN</Data></Cell>
+    <Cell><Data ss:Type="String">STRUK</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">2020-10-01</Data></Cell>
+    <Cell><Data ss:Type="String">T61Q</Data></Cell>
+    <Cell><Data ss:Type="String">PIERRE TENDEAN - JEMBER</Data></Cell>
+    <Cell><Data ss:Type="Number">1744</Data></Cell>
+    <Cell><Data ss:Type="Number">15253073</Data></Cell>
+    <Cell><Data ss:Type="Number">1166918</Data></Cell>
+    <Cell><Data ss:Type="Number">11244345</Data></Cell>
+    <Cell><Data ss:Type="Number">14086155</Data></Cell>
+    <Cell><Data ss:Type="Number">2841810</Data></Cell>
+    <Cell><Data ss:Type="Number">20.1745</Data></Cell>
+    <Cell><Data ss:Type="Number">512</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">2020-10-02</Data></Cell>
+    <Cell><Data ss:Type="String">T61Q</Data></Cell>
+    <Cell><Data ss:Type="String">PIERRE TENDEAN - JEMBER</Data></Cell>
+    <Cell><Data ss:Type="Number">1598</Data></Cell>
+    <Cell><Data ss:Type="Number">15823164</Data></Cell>
+    <Cell><Data ss:Type="Number">1217755</Data></Cell>
+    <Cell><Data ss:Type="Number">11451391</Data></Cell>
+    <Cell><Data ss:Type="Number">14605409</Data></Cell>
+    <Cell><Data ss:Type="Number">3154019</Data></Cell>
+    <Cell><Data ss:Type="Number">21.5949</Data></Cell>
+    <Cell><Data ss:Type="Number">583</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">2020-10-03</Data></Cell>
+    <Cell><Data ss:Type="String">T61Q</Data></Cell>
+    <Cell><Data ss:Type="String">PIERRE TENDEAN - JEMBER</Data></Cell>
+    <Cell><Data ss:Type="Number">1348</Data></Cell>
+    <Cell><Data ss:Type="Number">15038843</Data></Cell>
+    <Cell><Data ss:Type="Number">1111818</Data></Cell>
+    <Cell><Data ss:Type="Number">11036279</Data></Cell>
+    <Cell><Data ss:Type="Number">13927025</Data></Cell>
+    <Cell><Data ss:Type="Number">2890746</Data></Cell>
+    <Cell><Data ss:Type="Number">20.7564</Data></Cell>
+    <Cell><Data ss:Type="Number">541</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">2020-10-04</Data></Cell>
+    <Cell><Data ss:Type="String">T61Q</Data></Cell>
+    <Cell><Data ss:Type="String">PIERRE TENDEAN - JEMBER</Data></Cell>
+    <Cell><Data ss:Type="Number">1291</Data></Cell>
+    <Cell><Data ss:Type="Number">14166984</Data></Cell>
+    <Cell><Data ss:Type="Number">1102500</Data></Cell>
+    <Cell><Data ss:Type="Number">10421918</Data></Cell>
+    <Cell><Data ss:Type="Number">13064484</Data></Cell>
+    <Cell><Data ss:Type="Number">2642566</Data></Cell>
+    <Cell><Data ss:Type="Number">20.2271</Data></Cell>
+    <Cell><Data ss:Type="Number">469</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">2020-10-05</Data></Cell>
+    <Cell><Data ss:Type="String">T61Q</Data></Cell>
+    <Cell><Data ss:Type="String">PIERRE TENDEAN - JEMBER</Data></Cell>
+    <Cell><Data ss:Type="Number">1630</Data></Cell>
+    <Cell><Data ss:Type="Number">13511558</Data></Cell>
+    <Cell><Data ss:Type="Number">964155</Data></Cell>
+    <Cell><Data ss:Type="Number">9905481</Data></Cell>
+    <Cell><Data ss:Type="Number">12547403</Data></Cell>
+    <Cell><Data ss:Type="Number">2641922</Data></Cell>
+    <Cell><Data ss:Type="Number">21.0555</Data></Cell>
+    <Cell><Data ss:Type="Number">556</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">2020-10-06</Data></Cell>
+    <Cell><Data ss:Type="String">T61Q</Data></Cell>
+    <Cell><Data ss:Type="String">PIERRE TENDEAN - JEMBER</Data></Cell>
+    <Cell><Data ss:Type="Number">1284</Data></Cell>
+    <Cell><Data ss:Type="Number">11881106</Data></Cell>
+    <Cell><Data ss:Type="Number">796795</Data></Cell>
+    <Cell><Data ss:Type="Number">8792234</Data></Cell>
+    <Cell><Data ss:Type="Number">11084311</Data></Cell>
+    <Cell><Data ss:Type="Number">2292077</Data></Cell>
+    <Cell><Data ss:Type="Number">20.6786</Data></Cell>
+    <Cell><Data ss:Type="Number">434</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">2020-10-07</Data></Cell>
+    <Cell><Data ss:Type="String">T61Q</Data></Cell>
+    <Cell><Data ss:Type="String">PIERRE TENDEAN - JEMBER</Data></Cell>
+    <Cell><Data ss:Type="Number">1515</Data></Cell>
+    <Cell><Data ss:Type="Number">14898556</Data></Cell>
+    <Cell><Data ss:Type="Number">1106382</Data></Cell>
+    <Cell><Data ss:Type="Number">10974241</Data></Cell>
+    <Cell><Data ss:Type="Number">13792174</Data></Cell>
+    <Cell><Data ss:Type="Number">2817933</Data></Cell>
+    <Cell><Data ss:Type="Number">20.4314</Data></Cell>
+    <Cell><Data ss:Type="Number">541</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">2020-10-08</Data></Cell>
+    <Cell><Data ss:Type="String">T61Q</Data></Cell>
+    <Cell><Data ss:Type="String">PIERRE TENDEAN - JEMBER</Data></Cell>
+    <Cell><Data ss:Type="Number">1461</Data></Cell>
+    <Cell><Data ss:Type="Number">14857828</Data></Cell>
+    <Cell><Data ss:Type="Number">1097436</Data></Cell>
+    <Cell><Data ss:Type="Number">10873630</Data></Cell>
+    <Cell><Data ss:Type="Number">13760392</Data></Cell>
+    <Cell><Data ss:Type="Number">2886762</Data></Cell>
+    <Cell><Data ss:Type="Number">20.9788</Data></Cell>
+    <Cell><Data ss:Type="Number">557</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">2020-10-09</Data></Cell>
+    <Cell><Data ss:Type="String">T61Q</Data></Cell>
+    <Cell><Data ss:Type="String">PIERRE TENDEAN - JEMBER</Data></Cell>
+    <Cell><Data ss:Type="Number">1493</Data></Cell>
+    <Cell><Data ss:Type="Number">15229128</Data></Cell>
+    <Cell><Data ss:Type="Number">1116109</Data></Cell>
+    <Cell><Data ss:Type="Number">11207582</Data></Cell>
+    <Cell><Data ss:Type="Number">14113019</Data></Cell>
+    <Cell><Data ss:Type="Number">2905437</Data></Cell>
+    <Cell><Data ss:Type="Number">20.5869</Data></Cell>
+    <Cell><Data ss:Type="Number">564</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">2020-10-10</Data></Cell>
+    <Cell><Data ss:Type="String">T61Q</Data></Cell>
+    <Cell><Data ss:Type="String">PIERRE TENDEAN - JEMBER</Data></Cell>
+    <Cell><Data ss:Type="Number">1261</Data></Cell>
+    <Cell><Data ss:Type="Number">12013643</Data></Cell>
+    <Cell><Data ss:Type="Number">920691</Data></Cell>
+    <Cell><Data ss:Type="Number">8778913</Data></Cell>
+    <Cell><Data ss:Type="Number">11092952</Data></Cell>
+    <Cell><Data ss:Type="Number">2314039</Data></Cell>
+    <Cell><Data ss:Type="Number">20.8604</Data></Cell>
+    <Cell><Data ss:Type="Number">454</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">2020-10-11</Data></Cell>
+    <Cell><Data ss:Type="String">T61Q</Data></Cell>
+    <Cell><Data ss:Type="String">PIERRE TENDEAN - JEMBER</Data></Cell>
+    <Cell><Data ss:Type="Number">1216</Data></Cell>
+    <Cell><Data ss:Type="Number">13857950</Data></Cell>
+    <Cell><Data ss:Type="Number">1057691</Data></Cell>
+    <Cell><Data ss:Type="Number">10180617</Data></Cell>
+    <Cell><Data ss:Type="Number">12800259</Data></Cell>
+    <Cell><Data ss:Type="Number">2619642</Data></Cell>
+    <Cell><Data ss:Type="Number">20.4655</Data></Cell>
+    <Cell><Data ss:Type="Number">418</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">2020-10-12</Data></Cell>
+    <Cell><Data ss:Type="String">T61Q</Data></Cell>
+    <Cell><Data ss:Type="String">PIERRE TENDEAN - JEMBER</Data></Cell>
+    <Cell><Data ss:Type="Number">1741</Data></Cell>
+    <Cell><Data ss:Type="Number">14448404</Data></Cell>
+    <Cell><Data ss:Type="Number">1117736</Data></Cell>
+    <Cell><Data ss:Type="Number">10464928</Data></Cell>
+    <Cell><Data ss:Type="Number">13330668</Data></Cell>
+    <Cell><Data ss:Type="Number">2865740</Data></Cell>
+    <Cell><Data ss:Type="Number">21.4973</Data></Cell>
+    <Cell><Data ss:Type="Number">576</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">2020-10-13</Data></Cell>
+    <Cell><Data ss:Type="String">T61Q</Data></Cell>
+    <Cell><Data ss:Type="String">PIERRE TENDEAN - JEMBER</Data></Cell>
+    <Cell><Data ss:Type="Number">1851</Data></Cell>
+    <Cell><Data ss:Type="Number">13742105</Data></Cell>
+    <Cell><Data ss:Type="Number">1048845</Data></Cell>
+    <Cell><Data ss:Type="Number">9907621</Data></Cell>
+    <Cell><Data ss:Type="Number">12693260</Data></Cell>
+    <Cell><Data ss:Type="Number">2785638</Data></Cell>
+    <Cell><Data ss:Type="Number">21.9458</Data></Cell>
+    <Cell><Data ss:Type="Number">551</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">2020-10-14</Data></Cell>
+    <Cell><Data ss:Type="String">T61Q</Data></Cell>
+    <Cell><Data ss:Type="String">PIERRE TENDEAN - JEMBER</Data></Cell>
+    <Cell><Data ss:Type="Number">1192</Data></Cell>
+    <Cell><Data ss:Type="Number">12246810</Data></Cell>
+    <Cell><Data ss:Type="Number">934191</Data></Cell>
+    <Cell><Data ss:Type="Number">9044644</Data></Cell>
+    <Cell><Data ss:Type="Number">11312619</Data></Cell>
+    <Cell><Data ss:Type="Number">2267975</Data></Cell>
+    <Cell><Data ss:Type="Number">20.0482</Data></Cell>
+    <Cell><Data ss:Type="Number">530</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">2020-10-15</Data></Cell>
+    <Cell><Data ss:Type="String">T61Q</Data></Cell>
+    <Cell><Data ss:Type="String">PIERRE TENDEAN - JEMBER</Data></Cell>
+    <Cell><Data ss:Type="Number">1175</Data></Cell>
+    <Cell><Data ss:Type="Number">12520095</Data></Cell>
+    <Cell><Data ss:Type="Number">946445</Data></Cell>
+    <Cell><Data ss:Type="Number">9193386</Data></Cell>
+    <Cell><Data ss:Type="Number">11573650</Data></Cell>
+    <Cell><Data ss:Type="Number">2380263</Data></Cell>
+    <Cell><Data ss:Type="Number">20.5662</Data></Cell>
+    <Cell><Data ss:Type="Number">487</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">2020-10-16</Data></Cell>
+    <Cell><Data ss:Type="String">T61Q</Data></Cell>
+    <Cell><Data ss:Type="String">PIERRE TENDEAN - JEMBER</Data></Cell>
+    <Cell><Data ss:Type="Number">1386</Data></Cell>
+    <Cell><Data ss:Type="Number">14319537</Data></Cell>
+    <Cell><Data ss:Type="Number">1052518</Data></Cell>
+    <Cell><Data ss:Type="Number">10525558</Data></Cell>
+    <Cell><Data ss:Type="Number">13267019</Data></Cell>
+    <Cell><Data ss:Type="Number">2741461</Data></Cell>
+    <Cell><Data ss:Type="Number">20.6637</Data></Cell>
+    <Cell><Data ss:Type="Number">580</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">2020-10-17</Data></Cell>
+    <Cell><Data ss:Type="String">T61Q</Data></Cell>
+    <Cell><Data ss:Type="String">PIERRE TENDEAN - JEMBER</Data></Cell>
+    <Cell><Data ss:Type="Number">1180</Data></Cell>
+    <Cell><Data ss:Type="Number">11521463</Data></Cell>
+    <Cell><Data ss:Type="Number">861809</Data></Cell>
+    <Cell><Data ss:Type="Number">8435854</Data></Cell>
+    <Cell><Data ss:Type="Number">10659654</Data></Cell>
+    <Cell><Data ss:Type="Number">2223800</Data></Cell>
+    <Cell><Data ss:Type="Number">20.8618</Data></Cell>
+    <Cell><Data ss:Type="Number">475</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">2020-10-18</Data></Cell>
+    <Cell><Data ss:Type="String">T61Q</Data></Cell>
+    <Cell><Data ss:Type="String">PIERRE TENDEAN - JEMBER</Data></Cell>
+    <Cell><Data ss:Type="Number">1064</Data></Cell>
+    <Cell><Data ss:Type="Number">11695925</Data></Cell>
+    <Cell><Data ss:Type="Number">883191</Data></Cell>
+    <Cell><Data ss:Type="Number">8624822</Data></Cell>
+    <Cell><Data ss:Type="Number">10812734</Data></Cell>
+    <Cell><Data ss:Type="Number">2187912</Data></Cell>
+    <Cell><Data ss:Type="Number">20.2346</Data></Cell>
+    <Cell><Data ss:Type="Number">395</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">2020-10-19</Data></Cell>
+    <Cell><Data ss:Type="String">T61Q</Data></Cell>
+    <Cell><Data ss:Type="String">PIERRE TENDEAN - JEMBER</Data></Cell>
+    <Cell><Data ss:Type="Number">1206</Data></Cell>
+    <Cell><Data ss:Type="Number">12907490</Data></Cell>
+    <Cell><Data ss:Type="Number">892673</Data></Cell>
+    <Cell><Data ss:Type="Number">9616220</Data></Cell>
+    <Cell><Data ss:Type="Number">12014817</Data></Cell>
+    <Cell><Data ss:Type="Number">2398597</Data></Cell>
+    <Cell><Data ss:Type="Number">19.9637</Data></Cell>
+    <Cell><Data ss:Type="Number">510</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">2020-10-20</Data></Cell>
+    <Cell><Data ss:Type="String">T61Q</Data></Cell>
+    <Cell><Data ss:Type="String">PIERRE TENDEAN - JEMBER</Data></Cell>
+    <Cell><Data ss:Type="Number">1452</Data></Cell>
+    <Cell><Data ss:Type="Number">14322521</Data></Cell>
+    <Cell><Data ss:Type="Number">1081932</Data></Cell>
+    <Cell><Data ss:Type="Number">10599529</Data></Cell>
+    <Cell><Data ss:Type="Number">13240589</Data></Cell>
+    <Cell><Data ss:Type="Number">2641060</Data></Cell>
+    <Cell><Data ss:Type="Number">19.9467</Data></Cell>
+    <Cell><Data ss:Type="Number">564</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">2020-10-21</Data></Cell>
+    <Cell><Data ss:Type="String">T61Q</Data></Cell>
+    <Cell><Data ss:Type="String">PIERRE TENDEAN - JEMBER</Data></Cell>
+    <Cell><Data ss:Type="Number">1199</Data></Cell>
+    <Cell><Data ss:Type="Number">13432614</Data></Cell>
+    <Cell><Data ss:Type="Number">1033836</Data></Cell>
+    <Cell><Data ss:Type="Number">9831006</Data></Cell>
+    <Cell><Data ss:Type="Number">12398778</Data></Cell>
+    <Cell><Data ss:Type="Number">2567772</Data></Cell>
+    <Cell><Data ss:Type="Number">20.7099</Data></Cell>
+    <Cell><Data ss:Type="Number">503</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">2020-10-22</Data></Cell>
+    <Cell><Data ss:Type="String">T61Q</Data></Cell>
+    <Cell><Data ss:Type="String">PIERRE TENDEAN - JEMBER</Data></Cell>
+    <Cell><Data ss:Type="Number">1213</Data></Cell>
+    <Cell><Data ss:Type="Number">12820114</Data></Cell>
+    <Cell><Data ss:Type="Number">936782</Data></Cell>
+    <Cell><Data ss:Type="Number">9505174</Data></Cell>
+    <Cell><Data ss:Type="Number">11883332</Data></Cell>
+    <Cell><Data ss:Type="Number">2378159</Data></Cell>
+    <Cell><Data ss:Type="Number">20.0126</Data></Cell>
+    <Cell><Data ss:Type="Number">521</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">2020-10-23</Data></Cell>
+    <Cell><Data ss:Type="String">T61Q</Data></Cell>
+    <Cell><Data ss:Type="String">PIERRE TENDEAN - JEMBER</Data></Cell>
+    <Cell><Data ss:Type="Number">1408</Data></Cell>
+    <Cell><Data ss:Type="Number">14644472</Data></Cell>
+    <Cell><Data ss:Type="Number">1101314</Data></Cell>
+    <Cell><Data ss:Type="Number">10742861</Data></Cell>
+    <Cell><Data ss:Type="Number">13543158</Data></Cell>
+    <Cell><Data ss:Type="Number">2800297</Data></Cell>
+    <Cell><Data ss:Type="Number">20.6768</Data></Cell>
+    <Cell><Data ss:Type="Number">497</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">2020-10-24</Data></Cell>
+    <Cell><Data ss:Type="String">T61Q</Data></Cell>
+    <Cell><Data ss:Type="String">PIERRE TENDEAN - JEMBER</Data></Cell>
+    <Cell><Data ss:Type="Number">1457</Data></Cell>
+    <Cell><Data ss:Type="Number">14441772</Data></Cell>
+    <Cell><Data ss:Type="Number">1121677</Data></Cell>
+    <Cell><Data ss:Type="Number">10487624</Data></Cell>
+    <Cell><Data ss:Type="Number">13320095</Data></Cell>
+    <Cell><Data ss:Type="Number">2832471</Data></Cell>
+    <Cell><Data ss:Type="Number">21.2646</Data></Cell>
+    <Cell><Data ss:Type="Number">514</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">2020-10-25</Data></Cell>
+    <Cell><Data ss:Type="String">T61Q</Data></Cell>
+    <Cell><Data ss:Type="String">PIERRE TENDEAN - JEMBER</Data></Cell>
+    <Cell><Data ss:Type="Number">1119</Data></Cell>
+    <Cell><Data ss:Type="Number">12693283</Data></Cell>
+    <Cell><Data ss:Type="Number">972082</Data></Cell>
+    <Cell><Data ss:Type="Number">9364809</Data></Cell>
+    <Cell><Data ss:Type="Number">11721201</Data></Cell>
+    <Cell><Data ss:Type="Number">2356392</Data></Cell>
+    <Cell><Data ss:Type="Number">20.1037</Data></Cell>
+    <Cell><Data ss:Type="Number">451</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">2020-10-26</Data></Cell>
+    <Cell><Data ss:Type="String">T61Q</Data></Cell>
+    <Cell><Data ss:Type="String">PIERRE TENDEAN - JEMBER</Data></Cell>
+    <Cell><Data ss:Type="Number">1352</Data></Cell>
+    <Cell><Data ss:Type="Number">12613323</Data></Cell>
+    <Cell><Data ss:Type="Number">939064</Data></Cell>
+    <Cell><Data ss:Type="Number">9240798</Data></Cell>
+    <Cell><Data ss:Type="Number">11674259</Data></Cell>
+    <Cell><Data ss:Type="Number">2433461</Data></Cell>
+    <Cell><Data ss:Type="Number">20.8447</Data></Cell>
+    <Cell><Data ss:Type="Number">492</Data></Cell>
+   </Row>
+  </Table>
+ </Worksheet>
+</Workbook>

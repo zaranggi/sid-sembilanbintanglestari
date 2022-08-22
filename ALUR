@@ -1,0 +1,29 @@
+Bumi Muslim Residence
+1. Tanda Jadi Mengurangi Uang Total dan d catat dalam tagihan
+1. UM mengurangi uang Total dan juga UM di catat dalam tagihan
+
+turnkey(dibayar jika selesai)
+
+admmarketing 123456
+adminkeu 123456
+admproyek: pantau proyek
+admteknik : 123456 (inpout SPK)
+
+
+=========alur sidpro
+1. Marketing : Input Data Konsumen 
+2. Marketing : Followup
+3. Marketing : Input SPR, setelah ini muncul di list tagihan Booking dan UM
+4. Admin Keu : Input lakukan pembayaran Booking dan UM. status input masih menunggu apporval Atasan (muncul di List Approval, disini campur All pembayaran)
+5. Owner : Approve Kwitansi
+6. Admin Teknik : Input SPK(surat Perintah Kerja )-> pengajuan
+7. Owner : Approve SPK -> setelah di Approve akan masuk ke List Monitoring Progress Bangunan
+
+
+======yang harus buat sekarang
+1. SP3K : on progress harus fix malam ini : DONE
+2. Realisasi
+3. Rab : harus fix malam ini : DONE
+4. SPK : harus fix malam ini: DONE
+5. Realsisasi RAB dengan Pencairan : DONE
+6. Keuangan : harus fix malam ini

@@ -1,0 +1,42 @@
+CREATE TABLE `properti`.`cuti` (
+  `id` INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
+  `id_user` INTEGER UNSIGNED NOT NULL,
+  `jenis_cuti` VARCHAR(255) NOT NULL,
+  `tanggal_cuti` DATE NOT NULL,
+  `keterangan` TEXT NOT NULL,
+  `approval_1` VARCHAR(45) NOT NULL,
+  `approval_2` VARCHAR(45) NOT NULL,
+  `created_at` TIMESTAMP NOT NULL,
+  `updated_at` TIMESTAMP NOT NULL,
+  PRIMARY KEY (`id`)
+)
+ENGINE = InnoDB;
+
+CREATE TABLE  `properti`.`cuti_saldo` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `id_user` int(10) unsigned NOT NULL,
+  `saldo_awal` tinyint(3) unsigned NOT NULL,
+  `dipakai` tinyint(3) unsigned NOT NULL,
+  `saldo_akh` tinyint(3) unsigned NOT NULL,
+  `tgl_start` date  NOT NULL,
+  `tgl_end` date  NOT NULL,
+  `created_at` timestamp NOT NULL,
+  `updated_at` timestamp NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+CREATE TABLE `properti`.`izin` (
+  `id` INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
+  `id_user` INTEGER UNSIGNED NOT NULL,
+  `tanggal` DATE NOT NULL,
+  `keterangan` TEXT NOT NULL,
+  `approval_1` VARCHAR(45) NOT NULL,
+  `approval_2` VARCHAR(45) NOT NULL,
+  `created_at` TIMESTAMP NOT NULL,
+  `updated_at` TIMESTAMP NOT NULL,
+  PRIMARY KEY (`id`)
+)
+ENGINE = InnoDB;
+
+
+

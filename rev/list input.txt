@@ -1,0 +1,72 @@
+=== Admin Pemberkasan ===
+Input Data Konsumen (OK)
+Input Data MOU Konsumen (OK)
+Input Data Karyawan (Ok)
+Input Data Perumahan (OK)
+Input Data Kavling Rumah (OK)
+Input Data Surat Masuk dan Surat Keluar (OK)
+Input Data Legalitas PT (On Progres)
+
+=== Manager Produksi ==
+Input Data Subkon (OK)
+Input Data Rekanan (OK)
+Input Daftar Pekerjaan Pembangunan Rumah (OK)
+Input Daftar Pekerjaan Proyek (OK)
+Input Data RAB dan SPK/termin Pembangunan Rumah (OK)
+Input Data RAB dan SPK/termin Proyek ( Senin Pagi Rilis )
+
+=== Admin produksi ====
+Input Data Progress Rumah disertai Foto (OK)
+Input Data Material Bangunan(persediaan) (OK)
+Input Data Pemakaian Material per pekerjaan proyek ( Senin Pagi Rilis )
+Input Data Pemakaian Material per pekerjaan Bangunan Rumah ( Minggu Pagi Rilis )
+Input Data Pemakaian Material Keluar dan Masuk ( Minggu Pagi Rilis )
+
+=== Marketing ======
+Input Data Perencanaan Kegiatan Marketing ( Minggu Sore Rilis )
+Input Data Kegiatan Harian Marketing (OK)
+Input Data Calon Konsumen (OK)
+Input Data Followup Konsumen (OK)
+
+=== Adm Keuangan ===
+Input Data Akun Perkiraan (OK)
+Input Data Pembayaran Booking Fee (OK)
+Input Data Pembayaran Uang Muka (OK)
+Input Data Pembayaran Cicilan (OK)
+
+======
+
+=== Admin Logistik ==
+Input Data Material Bangunan(persediaan) (OK)
+Input Data Pemakaian Material per pekerjaan proyek ( Senin Pagi Rilis )
+Input Data Pemakaian Material per pekerjaan Bangunan Rumah ( Minggu Pagi Rilis )
+Input Data Pemakaian Material Keluar dan Masuk ( Minggu Pagi Rilis )
+
+==================
+Logistik
+==================
+logistik belanja
+Stok opname 
+Lihat Mutasi Material 
+
+staff produksi
+Menu Berita acara serah terima
+
+=== Refisi Pekerjaan ===
+Nama Pekerjaan 
+Material 
+Jumlah hari kerja
+Jumlah Tukang / pekerja
+Total biaya 
+Properti dan Unit
+Tgl Start 
+Tgl End
+=======================
+Penambahan bangunan 
+=======================
+Buat di Rab Proyek jenis tambahan Bangunan
+
+===============
+Man Produksi 
+===============
+Laporan Rekapitulasi Pembangunan Rumah
