@@ -17,23 +17,23 @@ class Trxkonsumen extends Model {
 	{
 		$db = DB::connection('mysql');
 		$listuser = $db->table('users')->OrderBy('name', 'ASC')->get();	    return $listuser;
-    }
+    }	 
 
-
+	 
 	public function listunit($id)
 	{
 		$db = DB::connection('mysql');
 		$data = $db->table('properti_kav')
 				->select(db::raw("id,nama,keterangan"))
-				->where('id_properti','=', $id)
-				->wherenotin('status', [2,3,4])
+				->where('id_properti','=', $id) 
+				->wherenotin('status', [2,4])
 				->OrderBy('id', 'ASC')
-				->get();
+				->get();	    
 		return $data;
-	}
+	}	
     public function insertwa($data)
 	{
-
+        
         DB::table('wa')
         ->insert(
                     [
@@ -41,19 +41,19 @@ class Trxkonsumen extends Model {
                         'status_wa'=> 0,
                     ]
                 );
-
+         
 		return "Sukses";
 	}
-
+		 
 	public function unitdetail($id)
 	{
 		$db = DB::connection('mysql');
 		$data = $db->table('properti_kav')
 				->select(db::raw("tipe,luas_tanah,luas_bangunan,harga"))
-				->where('id','=', $id)
-				->get();
+				->where('id','=', $id) 
+				->get();	    
 		return $data;
-	}
+	}	
 
 	public function preview($id)
 	{
@@ -80,9 +80,9 @@ class Trxkonsumen extends Model {
                     ->leftjoin("properti_kav","konsumen_spr.id_kav","=","properti_kav.id")
                     ->leftjoin("users","konsumen_spr.id_marketing","=","users.id")
                     ->where('konsumen_spr.id','=', $id)
-                    ->get();
+                    ->get();	    
         return $listuser;
-    }
-
-
+    }	
+	
+	
 }

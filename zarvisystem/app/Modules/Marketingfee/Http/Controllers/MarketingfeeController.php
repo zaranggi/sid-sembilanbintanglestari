@@ -82,12 +82,13 @@ class MarketingfeeController extends Controller
             $total_fee  = $request->input("total_fee");
             $tanggal  = date("Y-m-d");
             $keterangan  = $request->input("keterangan");
-            $id_fee = $id_marketing.date("YmdHis").$id_konsumen;
+
             $index2 = 0;
             foreach($id_konsumen as $r){
-
+            
+	        $id_fee = $id_marketing.date("YmdHis").$r;    
+	                    
                 $r_total_fee = $total_fee[$index2];
-
                 $data = new Marketingfee;
                 $data->id_fee = $id_fee;
                 $data->id_marketing = $id_marketing;

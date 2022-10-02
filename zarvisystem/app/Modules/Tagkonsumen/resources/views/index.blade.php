@@ -1,10 +1,10 @@
 @extends('admin.layout')
 
-@section('styles')
+@section('styles') 
 @stop
 @section('content')
 
-            <h1 class="page-header"> Data Piutang  <small>Konsumen</small></h1>
+            <h1 class="page-header"> List Tagihan  <small>Konsumen</small></h1>
             <!-- begin section-container -->
             <div class="section-container section-with-top-border p-b-5">
             <!-- begin row -->
@@ -23,7 +23,7 @@
 								<div class="stats-icon"><i class="fa fa-home"></i></div>
 								<div class="stats-info">
 									<h4>{{ ucfirst($r->nama)}}</h4>
-									<p>{{ number_format($r->tunit) }} Unit</p>
+									<p>{{ number_format($r->tunit) }} Unit</p>	
 								</div>
 								<div class="stats-link">
 									<a href="{{ url('tagkonsumen/listall/'.$r->id) }}">View Detail <i class="fa fa-arrow-alt-circle-right"></i></a>
@@ -31,19 +31,19 @@
 							</div>
 						</div>
 						@endforeach
-
+                        
                     </div>
-                    <!-- end col-9 -->
-
+                    <!-- end col-9 --> 
+ 
                     <!-- end col-3 -->
-                <!-- end col-3 -->
+                <!-- end col-3 --> 
 
-
+                     
                 </div>
                 <!-- end row -->
             </div>
             <!-- end section-container -->
-            @stop
-@section('scripts')
+            @stop            
+@section('scripts') 
 
-@stop
+@stop 

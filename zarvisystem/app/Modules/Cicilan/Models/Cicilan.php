@@ -65,7 +65,7 @@ class Cicilan extends Model {
 						`tagihan`.`id_spr` = '$id'
 						and `tagihan`.`id_jenis` = 5
 						and tagihan.status_spr = 1
-						order by tagihan.`id`,`tgl_jatuhtempo` asc;
+						order by tagihan.`id` asc;
 						");
 		return $listuser;
 	}

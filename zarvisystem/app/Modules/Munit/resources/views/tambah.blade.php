@@ -1,6 +1,6 @@
 @extends('admin.layout') 
 
-@section('styles') 
+@section('styles') 
 
 <link href="{{ asset("plugins/bootstrap-select/bootstrap-select.min.css")}}" rel="stylesheet" />
 
@@ -10,15 +10,15 @@
 
 <link href="{{ asset("plugins/select2/dist/css/select2.min.css")}}" rel="stylesheet" />
 
-<link href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.5.1/min/dropzone.min.css" rel="stylesheet" />
+<link href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.5.1/min/dropzone.min.css" rel="stylesheet" />
 
 @stop 
 
 @section('content')
 
- 
+ 
 
-<h1 class="page-header">Manage Unit Properti/Perumahan <small>Add new...</small></h1>
+<h1 class="page-header">Manage Unit Properti/Perumahan <small>Add new...</small></h1>
 
 <div class="section-container section-with-top-border p-b-10">    
 
@@ -48,7 +48,7 @@
 
                 <div class="panel-body">
 
-                    <form class="form-horizontal" role="form" method="POST" action="{{ url('/munit/saveadd') }}">
+                    <form class="form-horizontal" role="form" method="POST" action="{{ url('/munit/saveadd') }}">
 
                         <input type="hidden" name="_token" value="{{ csrf_token() }}">
 
@@ -74,7 +74,7 @@
 
                             </div> 
 
-                        @endif
+                        @endif
 
                         <div class="form-group m-b-10">
 
@@ -121,7 +121,7 @@
 
                             </div>
 
-                        </div>  
+                        </div>  
 
                         <div class="form-group m-b-5">
 
@@ -157,7 +157,7 @@
 
                       
 
-                        
+                        
 
                         <div class="form-group m-b-10">
 
@@ -173,7 +173,7 @@
 
                             </div>
 
-                        </div>
+                        </div>
 
                         <div class="form-group m-b-10">
 
@@ -189,7 +189,7 @@
 
                             </div>
 
-                        </div> 
+                        </div> 
 
                         <div class="form-group m-b-10">
 
@@ -205,7 +205,7 @@
 
                             </div>
 
-                        </div> 
+                        </div> 
 
                         
 
@@ -268,7 +268,7 @@
 
         </div>
 
-    </div>
+    </div>
 
     <div class="row">
 
@@ -286,7 +286,7 @@
 
                     
 
-                        <div class="form-group dropzone" id="image-upload"> 
+                        <div class="form-group dropzone" id="image-upload"> 
 
                                 <div class="text-center text-info">
 
@@ -324,15 +324,15 @@
 
     </div>
 
-</div>
-
+</div>
+
 
 
 @stop
 
  
 
-@section('scripts')
+@section('scripts')
 
 <script src="{{ asset("plugins/bootstrap-select/bootstrap-select.min.js")}}"></script>
 
@@ -340,7 +340,7 @@
 
 <script src="{{ asset('js/jquery.number.js') }}"></script> 
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.5.1/min/dropzone.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.5.1/min/dropzone.min.js"></script>
 
 <script type="text/javascript">
 
@@ -348,7 +348,7 @@
 
     $('.harga').number(true, 0);
 
-</script>
+</script>
 
 <script>
 
@@ -438,7 +438,7 @@
 
  
 
-</script>
+</script>
 
 @stop
 

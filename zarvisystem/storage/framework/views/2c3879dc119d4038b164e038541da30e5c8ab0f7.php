@@ -1,20 +1,18 @@
-@extends('admin.layout')
+<?php $__env->startSection('styles'); ?>
+<link href="<?php echo e(asset("plugins/DataTables/media/css/dataTables.bootstrap.min.css")); ?>" rel="stylesheet" />
+<link href="<?php echo e(asset("plugins/DataTables/extensions/Select/css/select.bootstrap.min.css")); ?>" rel="stylesheet" />
+<link href="<?php echo e(asset("plugins/DataTables/extensions/Responsive/css/responsive.bootstrap.min.css")); ?>" rel="stylesheet" />
 
-@section('styles')
-<link href="{{ asset("plugins/DataTables/media/css/dataTables.bootstrap.min.css") }}" rel="stylesheet" />
-<link href="{{ asset("plugins/DataTables/extensions/Select/css/select.bootstrap.min.css") }}" rel="stylesheet" />
-<link href="{{ asset("plugins/DataTables/extensions/Responsive/css/responsive.bootstrap.min.css") }}" rel="stylesheet" />
-
-<link href="{{ asset("plugins/bootstrap-select/bootstrap-select.min.css")}}" rel="stylesheet" />
-<link href="{{ asset("plugins/bootstrap-tagsinput/bootstrap-tagsinput.css")}}" rel="stylesheet" />
-<link href="{{ asset("plugins/jquery-tag-it/css/jquery.tagit.css")}}" rel="stylesheet" />
-<link href="{{ asset("plugins/select2/dist/css/select2.min.css")}}" rel="stylesheet" />
+<link href="<?php echo e(asset("plugins/bootstrap-select/bootstrap-select.min.css")); ?>" rel="stylesheet" />
+<link href="<?php echo e(asset("plugins/bootstrap-tagsinput/bootstrap-tagsinput.css")); ?>" rel="stylesheet" />
+<link href="<?php echo e(asset("plugins/jquery-tag-it/css/jquery.tagit.css")); ?>" rel="stylesheet" />
+<link href="<?php echo e(asset("plugins/select2/dist/css/select2.min.css")); ?>" rel="stylesheet" />
 
 
-<link href="{{ asset("plugins/bootstrap-calendar/css/bootstrap_calendar.css")}}" rel="stylesheet" />
-<link href="{{ asset("plugins/bootstrap-datepicker/css/bootstrap-datepicker3.css")}}" rel="stylesheet" />
-@stop
-@section('content')
+<link href="<?php echo e(asset("plugins/bootstrap-calendar/css/bootstrap_calendar.css")); ?>" rel="stylesheet" />
+<link href="<?php echo e(asset("plugins/bootstrap-datepicker/css/bootstrap-datepicker3.css")); ?>" rel="stylesheet" />
+<?php $__env->stopSection(); ?>
+<?php $__env->startSection('content'); ?>
 
 
     <h1 class="page-header">Data Booking  <small>Konsumen </small></h1>
@@ -31,12 +29,12 @@
                 <!-- begin panel-body -->
                 <div class="panel-body">
 
-                    @if(Session::has('flash_message'))
+                    <?php if(Session::has('flash_message')): ?>
                         <div class="alert alert-info ">
                       <span class="glyphicon glyphicon-ok">
-                      </span><em>  ~  {{ Session::get('flash_message') }}</em>
+                      </span><em>  ~  <?php echo e(Session::get('flash_message')); ?></em>
                         </div>
-                    @endif
+                    <?php endif; ?>
 
                     <!-- begin table-responsive -->
                     <div class="panel pagination-grey clearfix m-b-0">
@@ -57,35 +55,35 @@
 
                             </thead>
                              <tbody>
-                                 @php
+                                 <?php
                                     $no  = 1;
-                                 @endphp
-                        @foreach($data as $r)
+                                 ?>
+                        <?php $__currentLoopData = $data; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $r): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
 
                             <tr>
-                                <td class="text-center">{{ $no }}</td>
-                                <td class="text-nowrap text-info" >{{  $r->nama_konsumen }}</td>
-                                <td class="text-nowrap  text-center text-lime font-weight-bold">{{ $r->nama_properti }}</td>
-                                <td class="text-nowrap" >{{  $r->nama_kav }}</td>
-                                <td class="text-center" >{{  $r->tipe_unit }}</td>
-                                <td class="text-nowrap  text-center" >{{  App\Helpers\Tanggal::tgl_indo($r->tanggal) }}</td>
-                                <td class="text-nowrap  text-right" >Rp {{  number_format($r->nominal) }}</td>
-                                <td class="text-nowrap  text-left" >{{  $r->ket_keu }}</td>
+                                <td class="text-center"><?php echo e($no); ?></td>
+                                <td class="text-nowrap text-info" ><?php echo e($r->nama_konsumen); ?></td>
+                                <td class="text-nowrap  text-center text-lime font-weight-bold"><?php echo e($r->nama_properti); ?></td>
+                                <td class="text-nowrap" ><?php echo e($r->nama_kav); ?></td>
+                                <td class="text-center" ><?php echo e($r->tipe_unit); ?></td>
+                                <td class="text-nowrap  text-center" ><?php echo e(App\Helpers\Tanggal::tgl_indo($r->tanggal)); ?></td>
+                                <td class="text-nowrap  text-right" >Rp <?php echo e(number_format($r->nominal)); ?></td>
+                                <td class="text-nowrap  text-left" ><?php echo e($r->ket_keu); ?></td>
                                 <td class="text-nowrap  text-center">
-                                        <a href="#modal-dialog" id="{{ $r->id }}" class="batalkan" data-toggle="modal">
+                                        <a href="#modal-dialog" id="<?php echo e($r->id); ?>" class="batalkan" data-toggle="modal">
                                         <i class="fa fa-edit text-warning"></i>
 										    Buat Catatan
                                         </a>
-                                    <a href="{{ url('bookingkeu/cetak/'.$r->id_note) }}" class="text-lime font-weight-bold" target="_blank">
+                                    <a href="<?php echo e(url('bookingkeu/cetak/'.$r->id_note)); ?>" class="text-lime font-weight-bold" target="_blank">
                                         <i class="fa fa-money-bill-wave"></i>  Cetak
                                     </a>
                                 </td>
                             </tr>
-                            @php
+                            <?php
 								$no++;
-							 @endphp
+							 ?>
 
-                        @endforeach
+                        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 
                             </tbody>
 
@@ -110,8 +108,8 @@
 					<button type="button" class="close text-danger" data-dismiss="modal" aria-hidden="true">x</button>
                 </div>
                 <div class="modal-body">
-                    <form enctype="multipart/form-data" method="POST" action="{{ url('bookingkeu/note')}}">
-                        @csrf
+                    <form enctype="multipart/form-data" method="POST" action="<?php echo e(url('bookingkeu/note')); ?>">
+                        <?php echo csrf_field(); ?>
                         <input type="hidden" name="id_booking" id="id_booking" value="">
                         <div class="form-group row m-b-10">
                             <label class="col-form-label col-md-3">Terima Dari </label>
@@ -145,9 +143,9 @@
 								<div class="col-md-6">
 									<select class="form-control pilih" id="bank_pengirim" name="bank_pengirim">
 										<option value="" selected>Pilih Bank Pengirim</option>
-										@foreach($bank as $r)
-											<option value="{{$r->nama}}">{{$r->nama}}</option>
-										@endforeach
+										<?php $__currentLoopData = $bank; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $r): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+											<option value="<?php echo e($r->nama); ?>"><?php echo e($r->nama); ?></option>
+										<?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 									</select>
 								</div>
 							</div>
@@ -162,9 +160,9 @@
 								<div class="col-md-6">
 									<select class="form-control pilih" name="id_bank" id="id_bank">
 										<option value="" selected>Pilih Bank PT</option>
-										@foreach($bank_pt as $r)
-											<option value="{{$r->id}}">{{$r->nama}} :: {{$r->nomor_rekening}} An {{$r->atas_nama}}</option>
-										@endforeach
+										<?php $__currentLoopData = $bank_pt; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $r): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+											<option value="<?php echo e($r->id); ?>"><?php echo e($r->nama); ?> :: <?php echo e($r->nomor_rekening); ?> An <?php echo e($r->atas_nama); ?></option>
+										<?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 									</select>
 								</div>
 							</div>
@@ -196,17 +194,17 @@
 
 
     <!-- /basic initialization -->
-@stop
-@section('scripts')
-<script src="{{ asset("plugins/DataTables/media/js/jquery.dataTables.js") }}"></script>
-<script src="{{ asset("plugins/DataTables/media/js/dataTables.bootstrap.min.js") }}"></script>
-<script src="{{ asset("plugins/DataTables/extensions/Select/js/dataTables.select.min.js") }}"></script>
-<script src="{{ asset("js/page-table-manage-select.demo.min.js") }}"></script>
-<script src="{{ asset('js/jquery.number.js') }}"></script>
-<script src="{{ asset('plugins/bootstrap-datepicker/js/bootstrap-datepicker.js') }}"></script>
-<script src="{{ asset('plugins/bootstrap-daterangepicker/moment.js') }}"></script>
-<script src="{{ asset("plugins/bootstrap-select/bootstrap-select.min.js")}}"></script>
-<script src="{{ asset("plugins/select2/dist/js/select2.min.js")}}"></script>
+<?php $__env->stopSection(); ?>
+<?php $__env->startSection('scripts'); ?>
+<script src="<?php echo e(asset("plugins/DataTables/media/js/jquery.dataTables.js")); ?>"></script>
+<script src="<?php echo e(asset("plugins/DataTables/media/js/dataTables.bootstrap.min.js")); ?>"></script>
+<script src="<?php echo e(asset("plugins/DataTables/extensions/Select/js/dataTables.select.min.js")); ?>"></script>
+<script src="<?php echo e(asset("js/page-table-manage-select.demo.min.js")); ?>"></script>
+<script src="<?php echo e(asset('js/jquery.number.js')); ?>"></script>
+<script src="<?php echo e(asset('plugins/bootstrap-datepicker/js/bootstrap-datepicker.js')); ?>"></script>
+<script src="<?php echo e(asset('plugins/bootstrap-daterangepicker/moment.js')); ?>"></script>
+<script src="<?php echo e(asset("plugins/bootstrap-select/bootstrap-select.min.js")); ?>"></script>
+<script src="<?php echo e(asset("plugins/select2/dist/js/select2.min.js")); ?>"></script>
 
 <!-- ================== END PAGE LEVEL JS ================== -->
 
@@ -255,5 +253,7 @@ $(document).on('click', '#simpan', function(){
         PageDemo.init();
     });
 </script>
-@stop
+<?php $__env->stopSection(); ?>
 
+
+<?php echo $__env->make('admin.layout', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH D:\zarvi\sbl\zarvisystem\app\Modules/Bookingkeu/resources/views/index.blade.php ENDPATH**/ ?>

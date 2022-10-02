@@ -1,21 +1,19 @@
-@extends('admin.layout')
+<?php $__env->startSection('styles'); ?>
+<link href="<?php echo e(asset("plugins/DataTables/media/css/dataTables.bootstrap.min.css")); ?>" rel="stylesheet" />
+<link href="<?php echo e(asset("plugins/DataTables/extensions/Select/css/select.bootstrap.min.css")); ?>" rel="stylesheet" />
+<link href="<?php echo e(asset("plugins/DataTables/extensions/Responsive/css/responsive.bootstrap.min.css")); ?>" rel="stylesheet" />
 
-@section('styles')
-<link href="{{ asset("plugins/DataTables/media/css/dataTables.bootstrap.min.css") }}" rel="stylesheet" />
-<link href="{{ asset("plugins/DataTables/extensions/Select/css/select.bootstrap.min.css") }}" rel="stylesheet" />
-<link href="{{ asset("plugins/DataTables/extensions/Responsive/css/responsive.bootstrap.min.css") }}" rel="stylesheet" />
-
-<link href="{{ asset("plugins/bootstrap-select/bootstrap-select.min.css")}}" rel="stylesheet" />
-<link href="{{ asset("plugins/bootstrap-tagsinput/bootstrap-tagsinput.css")}}" rel="stylesheet" />
-<link href="{{ asset("plugins/jquery-tag-it/css/jquery.tagit.css")}}" rel="stylesheet" />
-<link href="{{ asset("plugins/select2/dist/css/select2.min.css")}}" rel="stylesheet" />
-<link href="{{ asset("plugins/bootstrap-calendar/css/bootstrap_calendar.css")}}" rel="stylesheet" />
-<link href="{{ asset("plugins/bootstrap-datepicker/css/bootstrap-datepicker3.css")}}" rel="stylesheet" />
-@stop
-@section('content')
+<link href="<?php echo e(asset("plugins/bootstrap-select/bootstrap-select.min.css")); ?>" rel="stylesheet" />
+<link href="<?php echo e(asset("plugins/bootstrap-tagsinput/bootstrap-tagsinput.css")); ?>" rel="stylesheet" />
+<link href="<?php echo e(asset("plugins/jquery-tag-it/css/jquery.tagit.css")); ?>" rel="stylesheet" />
+<link href="<?php echo e(asset("plugins/select2/dist/css/select2.min.css")); ?>" rel="stylesheet" />
+<link href="<?php echo e(asset("plugins/bootstrap-calendar/css/bootstrap_calendar.css")); ?>" rel="stylesheet" />
+<link href="<?php echo e(asset("plugins/bootstrap-datepicker/css/bootstrap-datepicker3.css")); ?>" rel="stylesheet" />
+<?php $__env->stopSection(); ?>
+<?php $__env->startSection('content'); ?>
 
 
-@foreach($konsumen as $rr)
+<?php $__currentLoopData = $konsumen; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $rr): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
 
 
     <h1 class="page-header">Data Pembayaran <small> Cicilan Unit </small></h1>
@@ -35,7 +33,8 @@
                     <div class="invoice">
 						<!-- begin invoice-company -->
 						<div class="invoice-company">
-							Nomor Kontrak : {{ $rr->kode }}
+							Nomor Kontrak : <?php echo e($rr->kode); ?>
+
 						</div>
 						<!-- end invoice-company -->
 						<!-- begin invoice-header -->
@@ -43,26 +42,26 @@
 							<div class="invoice-from">
 								<small>Konsumen</small>
 								<address class="m-t-5 m-b-5">
-									<strong class="text-inverse">{{ $rr->nama }}</strong><br />
-									Alamat: {{ $rr->alamat }}<br />
-									Phone: {{ $rr->telp }}<br />
-									NIK: {{ $rr->idcard }}<br />
+									<strong class="text-inverse"><?php echo e($rr->nama); ?></strong><br />
+									Alamat: <?php echo e($rr->alamat); ?><br />
+									Phone: <?php echo e($rr->telp); ?><br />
+									NIK: <?php echo e($rr->idcard); ?><br />
 								</address>
 							</div>
 							<div class="invoice-to">
 								<small>Unit</small>
 								<address class="m-t-5 m-b-5">
-									<strong class="text-lime">{{ $rr->nama_properti }}</strong><br/>
-									Kavling {{ $rr->nama_kav }} / Tipe {{ $rr->tipe_unit }}<br/>
+									<strong class="text-lime"><?php echo e($rr->nama_properti); ?></strong><br/>
+									Kavling <?php echo e($rr->nama_kav); ?> / Tipe <?php echo e($rr->tipe_unit); ?><br/>
 								</address>
 							</div>
 							<div class="invoice-date">
 								<small>Marketing</small>
-                                <div class="date text-info m-t-5">{{ $rr->nama_marketing }}</div>
+                                <div class="date text-info m-t-5"><?php echo e($rr->nama_marketing); ?></div>
                                 <hr/>
                                 <strong class="text-lime text-lg font-weight-bold m-b-5">Promo</strong><br/>
 
-                                    <small>{{$rr->bonus}}</small>
+                                    <small><?php echo e($rr->bonus); ?></small>
 							</div>
 						</div>
 
@@ -71,7 +70,7 @@
 			</div>
 		</div>
 	</div>
-@endforeach
+<?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 
 
     <div class="row">
@@ -89,12 +88,12 @@
                 <div class="panel-body">
 
 
-                    @if(Session::has('flash_message'))
+                    <?php if(Session::has('flash_message')): ?>
                         <div class="alert alert-info ">
                       <span class="glyphicon glyphicon-ok">
-                      </span><em>  ~  {{ Session::get('flash_message') }}</em>
+                      </span><em>  ~  <?php echo e(Session::get('flash_message')); ?></em>
                         </div>
-                    @endif
+                    <?php endif; ?>
 
                     <!-- begin table-responsive -->
                     <div class="panel pagination-grey clearfix m-b-0">
@@ -113,26 +112,26 @@
 
                             </thead>
                              <tbody>
-                        @foreach($data as $r)
+                        <?php $__currentLoopData = $data; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $r): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
 
                             <tr>
-                                <td > Cicilan Ke - {{  $r->urutan }}</td>
-                                <td class="text-right" >{{  number_format($r->tagihan) }}</td>
-                                <td class="text-right" >{{  number_format($r->bayar) }}</td>
-                                <td class="text-right" >{{  number_format($r->tagihan - $r->bayar) }}</td>
-                                <td class="text-center">{{  $r->status }}</td>
-                                <td class="text-center  text-nowrap">{{  App\Helpers\Tanggal::tgl_indo($r->tgl_jatuhtempo) }}</td>
+                                <td > Cicilan Ke - <?php echo e($r->urutan); ?></td>
+                                <td class="text-right" ><?php echo e(number_format($r->tagihan)); ?></td>
+                                <td class="text-right" ><?php echo e(number_format($r->bayar)); ?></td>
+                                <td class="text-right" ><?php echo e(number_format($r->tagihan - $r->bayar)); ?></td>
+                                <td class="text-center"><?php echo e($r->status); ?></td>
+                                <td class="text-center  text-nowrap"><?php echo e(App\Helpers\Tanggal::tgl_indo($r->tgl_jatuhtempo)); ?></td>
                                 <td class="text-center">
-                                    @if($r->tagihan > $r->bayar)
-                                        <a href="#modal-dialog" id="{{ $r->id }}" class="text-successed bayar" data-toggle="modal">
+                                    <?php if($r->tagihan > $r->bayar): ?>
+                                        <a href="#modal-dialog" id="<?php echo e($r->id); ?>" class="text-successed bayar" data-toggle="modal">
                                             <i class="fa fa-money-bill-wave"></i>
                                         </a>
-                                    @endif
+                                    <?php endif; ?>
 
                                 </td>
                             </tr>
 
-                        @endforeach
+                        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 
                             </tbody>
 
@@ -157,8 +156,8 @@
 					<button type="button" class="close text-danger" data-dismiss="modal" aria-hidden="true">x</button>
                 </div>
                 <div class="modal-body">
-                    <form enctype="multipart/form-data" method="POST" action="{{ url("cicilan/simpanbayar")}}">
-                        @csrf
+                    <form enctype="multipart/form-data" method="POST" action="<?php echo e(url("cicilan/simpanbayar")); ?>">
+                        <?php echo csrf_field(); ?>
                         <input type="hidden" name="id_tagihan" id="id_tagihan" value="">
                         <div class="form-group row m-b-10">
                             <label class="col-form-label col-md-3">Terima Dari </label>
@@ -192,9 +191,9 @@
 								<div class="col-md-6">
 									<select class="form-control pilih" id="bank_pengirim" name="bank_pengirim">
 										<option value="" selected>Pilih Bank Pengirim</option>
-										@foreach($bank as $r)
-											<option value="{{$r->nama}}">{{$r->nama}}</option>
-										@endforeach
+										<?php $__currentLoopData = $bank; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $r): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+											<option value="<?php echo e($r->nama); ?>"><?php echo e($r->nama); ?></option>
+										<?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 									</select>
 								</div>
 							</div>
@@ -209,9 +208,9 @@
 								<div class="col-md-6">
 									<select class="form-control pilih" name="id_bank" id="id_bank">
 										<option value="" selected>Pilih Bank PT</option>
-										@foreach($bank_pt as $r)
-											<option value="{{$r->id}}">{{$r->nama}} :: {{$r->nomor_rekening}} An {{$r->atas_nama}}</option>
-										@endforeach
+										<?php $__currentLoopData = $bank_pt; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $r): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+											<option value="<?php echo e($r->id); ?>"><?php echo e($r->nama); ?> :: <?php echo e($r->nomor_rekening); ?> An <?php echo e($r->atas_nama); ?></option>
+										<?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 									</select>
 								</div>
 							</div>
@@ -278,25 +277,25 @@
 
                             </thead>
                              <tbody>
-							 @php $no = 1; @endphp
-                        @foreach($his as $r)
+							 <?php $no = 1; ?>
+                        <?php $__currentLoopData = $his; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $r): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
 
                             <tr>
-                                <td class="text-center text-nowrap">{{ $no }}</td>
-                                <td class="text-center text-nowrap">{{ $r->kode }}</td>
-                                <td  class="text-center text-nowrap">{{  App\Helpers\Tanggal::tgl_indo($r->tanggal) }}</td>
-                                <td  class="text-nowrap">{{  $r->pembayar }}</td>
-                                <td class="text-center text-nowrap">{{ $r->tipe_pembayaran }}</td>
-                                <td class="text-nowrap" ><a href="#"> {{ $r->nama_rekening_pengirim  }}</a>  <span class="d-block font-size-sm text-muted">{{ $r->bank_pengirim ." - ". $r->norek_pengirim}}</span>  </h6> </td>
-                                <td class="text-right" >{{  number_format($r->jumlah) }}</td>
+                                <td class="text-center text-nowrap"><?php echo e($no); ?></td>
+                                <td class="text-center text-nowrap"><?php echo e($r->kode); ?></td>
+                                <td  class="text-center text-nowrap"><?php echo e(App\Helpers\Tanggal::tgl_indo($r->tanggal)); ?></td>
+                                <td  class="text-nowrap"><?php echo e($r->pembayar); ?></td>
+                                <td class="text-center text-nowrap"><?php echo e($r->tipe_pembayaran); ?></td>
+                                <td class="text-nowrap" ><a href="#"> <?php echo e($r->nama_rekening_pengirim); ?></a>  <span class="d-block font-size-sm text-muted"><?php echo e($r->bank_pengirim ." - ". $r->norek_pengirim); ?></span>  </h6> </td>
+                                <td class="text-right" ><?php echo e(number_format($r->jumlah)); ?></td>
                                 <td class="text-center">
-                                    <a href="{{ url('cicilan/cetak/'.$r->id) }}" class="text-lime font-weight-bold" target="_blank">
+                                    <a href="<?php echo e(url('cicilan/cetak/'.$r->id)); ?>" class="text-lime font-weight-bold" target="_blank">
                                         <i class="fa fa-money-bill-wave"></i>  Cetak
                                     </a>
                                 </td>
                             </tr>
-                            @php $no++; @endphp
-                        @endforeach
+                            <?php $no++; ?>
+                        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 
                             </tbody>
 
@@ -313,19 +312,19 @@
 
 
     <!-- /basic initialization -->
-@stop
-@section('scripts')
-<script src="{{ asset("plugins/DataTables/media/js/jquery.dataTables.js") }}"></script>
-<script src="{{ asset("plugins/DataTables/media/js/dataTables.bootstrap.min.js") }}"></script>
-<script src="{{ asset("plugins/DataTables/extensions/Select/js/dataTables.select.min.js") }}"></script>
+<?php $__env->stopSection(); ?>
+<?php $__env->startSection('scripts'); ?>
+<script src="<?php echo e(asset("plugins/DataTables/media/js/jquery.dataTables.js")); ?>"></script>
+<script src="<?php echo e(asset("plugins/DataTables/media/js/dataTables.bootstrap.min.js")); ?>"></script>
+<script src="<?php echo e(asset("plugins/DataTables/extensions/Select/js/dataTables.select.min.js")); ?>"></script>
 
-<script src="{{ asset('js/jquery.number.js') }}"></script>
-<script src="{{ asset('plugins/bootstrap-datepicker/js/bootstrap-datepicker.js') }}"></script>
-<script src="{{ asset('plugins/bootstrap-daterangepicker/moment.js') }}"></script>
+<script src="<?php echo e(asset('js/jquery.number.js')); ?>"></script>
+<script src="<?php echo e(asset('plugins/bootstrap-datepicker/js/bootstrap-datepicker.js')); ?>"></script>
+<script src="<?php echo e(asset('plugins/bootstrap-daterangepicker/moment.js')); ?>"></script>
 
 
-<script src="{{ asset("plugins/bootstrap-select/bootstrap-select.min.js")}}"></script>
-<script src="{{ asset("plugins/select2/dist/js/select2.min.js")}}"></script>
+<script src="<?php echo e(asset("plugins/bootstrap-select/bootstrap-select.min.js")); ?>"></script>
+<script src="<?php echo e(asset("plugins/select2/dist/js/select2.min.js")); ?>"></script>
 <script type="text/javascript">
     $('.nomor').number(true, 0, ',', ' ');
     $('.rupiah').number(true, 0,);
@@ -375,5 +374,7 @@ $(document).on('click', '#simpan', function(){
 });
 </script>
 
-@stop
+<?php $__env->stopSection(); ?>
 
+
+<?php echo $__env->make('admin.layout', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH D:\zarvi\sbl\zarvisystem\app\Modules/Cicilan/resources/views/view.blade.php ENDPATH**/ ?>

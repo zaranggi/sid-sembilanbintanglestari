@@ -12,6 +12,7 @@
 */
 
 Route::group([ 'middleware' => ['web','auth'] ], function() {
+    Route::get('bookingkeu/cetak/{id}', array('uses' => 'BookingkeuController@cetak')); 
     Route::post('bookingkeu/note', array('uses' => 'BookingkeuController@note'));
     Route::post('bookingkeu/fu', array('before' => 'csrf','uses' => 'BookingkeuController@fu'));
     Route::resource('bookingkeu', 'BookingkeuController');

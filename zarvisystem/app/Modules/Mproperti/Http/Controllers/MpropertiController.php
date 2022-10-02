@@ -47,7 +47,7 @@ class MpropertiController extends Controller
     public function create()
     {
         $bank = $this->data->bank();
-        return view('mproperti::create', ['bank' => $bank]);
+        return view('Mproperti::create', ['bank' => $bank]);
 
     }
 

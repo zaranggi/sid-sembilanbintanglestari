@@ -1,17 +1,17 @@
 @extends('admin.layout')
 
-@section('styles') 
+@section('styles')
 <link href="{{ asset("plugins/DataTables/media/css/dataTables.bootstrap.min.css") }}" rel="stylesheet" />
 <link href="{{ asset("plugins/DataTables/extensions/Select/css/select.bootstrap.min.css") }}" rel="stylesheet" />
 <link href="{{ asset("plugins/DataTables/extensions/Responsive/css/responsive.bootstrap.min.css") }}" rel="stylesheet" />
 
 <link href="{{ asset("plugins/bootstrap-calendar/css/bootstrap_calendar.css")}}" rel="stylesheet" />
-<link href="{{ asset("plugins/bootstrap-datepicker/css/bootstrap-datepicker3.css")}}" rel="stylesheet" /> 
+<link href="{{ asset("plugins/bootstrap-datepicker/css/bootstrap-datepicker3.css")}}" rel="stylesheet" />
 @stop
 @section('content')
 
 
-     
+
     <div class="row">
         <!-- begin col-6 -->
         <div class="col-lg-12">
@@ -20,12 +20,12 @@
                 <!-- begin panel-heading -->
                 <div class="panel-heading">
                     <h4 class="panel-title">Pembelian Bertahap</h4>
-                    
+
                 </div>
                 <!-- end panel-heading -->
                 <!-- begin panel-body -->
                 <div class="panel-body">
-                   
+
 
                     @if(Session::has('flash_message'))
                         <div class="alert alert-info ">
@@ -37,9 +37,9 @@
                     <!-- begin table-responsive -->
                     <div class="panel pagination-grey clearfix m-b-0">
                         <div class="table-responsive">
-                        <table id="data-table"  class="table table-bordered table-hover width-full"">
+                        <table id="data-table"  class="table table-bordered table-hover width-full">
                             <thead>
-                                <tr class="text-center"> 
+                                <tr class="text-center">
                                     <th class="text-nowrap">Perumahan</th>
                                     <th class="text-nowrap" >Kavling</th>
                                     <th class="text-nowrap" >Tipe Unit</th>
@@ -47,8 +47,8 @@
                                     <th class="text-nowrap">Tagihan</th>
                                     <th class="text-nowrap">Pembayaran</th>
                                     <th class="text-nowrap">Kurang</th>
-                                    <th class="text-nowrap">Status</th>  
-                                    <th class="text-nowrap">Action</th> 
+                                    <th class="text-nowrap">Status</th>
+                                    <th class="text-nowrap">Action</th>
                                 </tr>
 
                             </thead>
@@ -63,16 +63,22 @@
                                 <td class="text-right" >{{  number_format($r->tagihan) }}</td>
                                 <td class="text-right" >{{  number_format($r->bayar) }}</td>
                                 <td class="text-right" >{{  number_format($r->tagihan - $r->bayar) }}</td>
-                                <td class="text-center">{{  $r->status }}</td>                
-                                <td class="text-center">      
+                                <td class="text-center">
+                                @if( $r->tagihan - $r->bayar > 0)
+                                    Belum Lunas
+                                @else
+                                    Lunas
+                                @endif
+                                </td>
+                                <td class="text-center">
                                 <a href="{{ url('cicilan/detail/'.$r->id_spr) }}" class="text-successed bayar">
-                                                <i class="fa fa-eye"></i> 
+                                                <i class="fa fa-eye"></i>
                                             </a>
-                                       
-                                </td> 
+
+                                </td>
                             </tr>
 
-                        @endforeach 
+                        @endforeach
 
                             </tbody>
 
@@ -87,45 +93,44 @@
     </div>
 
 
-@stop 
+@stop
 @section('scripts')
 <script src="{{ asset("plugins/DataTables/media/js/jquery.dataTables.js") }}"></script>
 <script src="{{ asset("plugins/DataTables/media/js/dataTables.bootstrap.min.js") }}"></script>
-<script src="{{ asset("plugins/DataTables/extensions/Select/js/dataTables.select.min.js") }}"></script> 
-<script src="{{ asset("js/page-table-manage-select.demo.min.js") }}"></script>
-<script src="{{ asset('js/jquery.number.js') }}"></script> 
+<script src="{{ asset("plugins/DataTables/extensions/Select/js/dataTables.select.min.js") }}"></script>
+<script src="{{ asset('js/jquery.number.js') }}"></script>
 <script src="{{ asset('plugins/bootstrap-datepicker/js/bootstrap-datepicker.js') }}"></script>
 <script src="{{ asset('plugins/bootstrap-daterangepicker/moment.js') }}"></script>
 
-<script type="text/javascript"> 
+<script type="text/javascript">
     $('.nomor').number(true, 0, ',', ' ');
     $('.rupiah').number(true, 0,);
 </script>
 
 <script type="text/javascript">
-    $(document).ready(function() {   
+    $(document).ready(function() {
         $("#datepicker-default").datepicker(
             {
                 todayHighlight: 1,
                 autoclose:1,
                 format: "yyyy-mm-dd",
-            }); 
+            });
         });
 </script>
 
 <script type="text/javascript">
-    $(document).ready(function() { 
-        PageDemo.init();
+    $(document).ready(function() {
+        $("#data-table").DataTable({"order": [], "aaSorting": []})
     });
 </script>
 
 <script type="text/javascript">
-$(document).on('click', '.bayar', function(){  
-    var id_tagihan = $(this).attr("id");   
+$(document).on('click', '.bayar', function(){
+    var id_tagihan = $(this).attr("id");
     //$('#id_tagihan').empty();
-    $('#id_tagihan').val(id_tagihan);    
-         
-});  
+    $('#id_tagihan').val(id_tagihan);
+
+});
 </script>
 
 @stop
