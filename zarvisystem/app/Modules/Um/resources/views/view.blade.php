@@ -188,7 +188,7 @@
                                 <td class="text-right" >{{  number_format($r->jumlah) }}</td>
                                 <td class="text-center">
                                    
-                                    <a href="{{ url('um/cetak/'.$r->kode) }}" class="text-lime font-weight-bold" target="_blank">
+                                    <a href="{{ url('um/cetak/'.$r->id) }}" class="text-lime font-weight-bold" target="_blank">
                                         <i class="fa fa-money-bill-wave"></i>  Cetak
                                 </a>
                                                                      

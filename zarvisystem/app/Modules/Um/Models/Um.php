@@ -124,7 +124,7 @@ class Um extends Model {
 		left join properti_kav d on b.id_kav = d.id
 		left join konsumen e on b.id_konsumen = e.id
 		left join mtran f on a.kode = f.kode_tagihan
-		where a.kode='$kode'; ");	    
+		where a.id='$kode'; ");	    
 		return $listuser;
 	}
 	

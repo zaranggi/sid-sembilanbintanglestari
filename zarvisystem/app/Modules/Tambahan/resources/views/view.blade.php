@@ -290,12 +290,13 @@
                                 <td class="text-nowrap" ><a href="#"> {{ $r->nama_rekening_pengirim  }}</a>  <span class="d-block font-size-sm text-muted">{{ $r->bank_pengirim ." - ". $r->norek_pengirim}}</span>  </h6> </td>
                                 <td class="text-right" >{{  number_format($r->jumlah) }}</td>
                                 <td class="text-center">
-                                    <a href="{{ url('tambahan/cetak/'.$r->kode) }}" class="text-lime font-weight-bold" target="_blank">
+                                    <a href="{{ url('tambahan/cetak/'.$r->id) }}" class="text-lime font-weight-bold" target="_blank">
                                         <i class="fa fa-money-bill-wave"></i>  Cetak
                                     </a>    
                                 </td>                                
                             </tr>
-
+                       	 @php $no++; @endphp
+                        
                         @endforeach 
 
                             </tbody>
