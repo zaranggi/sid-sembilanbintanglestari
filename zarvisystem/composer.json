@@ -1,15 +1,14 @@
 {
-    "name": "laravel/laravel",
+    "name": "SID",
     "type": "project",
-    "description": "The Laravel Framework.",
+    "description": "SID",
     "keywords": [
         "framework",
         "laravel"
     ],
     "license": "MIT",
     "require": {
-        "php": "^7.3|^8.0",
-        "artem-schander/l5-modular": "^2.1",
+        "php": "^7.3|^8.0", 
         "fideloper/proxy": "^4.4",
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.0.1",
